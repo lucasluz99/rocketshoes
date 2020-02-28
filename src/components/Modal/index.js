@@ -11,7 +11,7 @@ export default function Modal({ product, closeModal }) {
         <img src={product.image} alt="Tenis" />
         <strong>{product.title}</strong>
         <span>{product.priceFormatted}</span>
-        <Link to="/cart">Ir para o carrinho</Link>
+        <Link to="/cart">Finalizar Pedido</Link>
         <button onClick={closeModal} type="button">
           Continuar comprando
         </button>

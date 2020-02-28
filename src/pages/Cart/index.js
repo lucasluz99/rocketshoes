@@ -5,11 +5,21 @@ import {
   MdDelete,
 } from 'react-icons/md';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as CartActions from '../../store/modules/cart/actions';
+
 import { formatPrice } from '../../util/format';
 
 import { Container, ProductTable, Total } from './styles';
 
-function Cart({ cart }) {
+function Cart({ cart, removeFromCart, updateAmount }) {
+  function increment(product) {
+    updateAmount(product.id, product.amount + 1);
+  }
+
+  function decrement(product) {
+    updateAmount(product.id, product.amount - 1);
+  }
   return (
     <Container>
       <ProductTable>
@@ -34,11 +44,11 @@ function Cart({ cart }) {
               </td>
               <td>
                 <div>
-                  <button onClick={() => {}} type="button">
+                  <button onClick={() => decrement(product)} type="button">
                     <MdRemoveCircleOutline color="#7159c1" size={20} />
                   </button>
                   <input readOnly type="number" value={product.amount} />
-                  <button onClick={() => {}} type="button">
+                  <button onClick={() => increment(product)} type="button">
                     <MdAddCircleOutline color="#7159c1" size={20} />
                   </button>
                 </div>
@@ -47,7 +57,10 @@ function Cart({ cart }) {
                 <strong>R$ 129,90</strong>
               </td>
               <td>
-                <button type="button" onClick={() => {}}>
+                <button
+                  type="button"
+                  onClick={() => removeFromCart(product.id)}
+                >
                   <MdDelete color="#7159c1" size={20} />
                 </button>
               </td>
@@ -71,4 +84,7 @@ const mapStateToProps = state => ({
   cart: state.cart,
 });
 
-export default connect(mapStateToProps)(Cart);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(CartActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

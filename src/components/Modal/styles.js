@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.div`
   position: fixed;
@@ -44,8 +45,25 @@ export const ProductModal = styled.div`
   }
 
   a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
     text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+    height: 30px;
+    width: 200px;
+    font-weight: bold;
+    background: #7159c1;
+    text-transform: uppercase;
+    transition: 250ms;
+
+    &:hover {
+      background: ${darken(0.1, '#7159c1')};
+    }
   }
 
   button {
@@ -58,5 +76,9 @@ export const ProductModal = styled.div`
     width: 200px;
     font-weight: bold;
     text-transform: uppercase;
+
+    &:hover {
+      background: ${darken(0.1, '#7159c1')};
+    }
   }
 `;
