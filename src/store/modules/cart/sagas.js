@@ -1,6 +1,8 @@
 import { call, all, takeLatest, select, put } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 import { updateAmountSuccess, addToCartSuccess } from './actions';
+import { openModal } from '../modal/actions';
+
 import { formatPrice } from '../../../util/format';
 
 import api from '../../../services/api';
@@ -23,6 +25,7 @@ function* addToCart({ id }) {
 
   if (productExists) {
     yield put(updateAmountSuccess(id, amount));
+    yield put(openModal(productExists));
   } else {
     const { data: product } = yield call(api.get, `products/${id}`);
 
@@ -33,6 +36,7 @@ function* addToCart({ id }) {
     };
 
     yield put(addToCartSuccess(data));
+    yield put(openModal(product));
   }
 }
 

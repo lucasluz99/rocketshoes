@@ -10,10 +10,8 @@ import { ProductList } from './styles';
 import api from '../../services/api';
 import { formatPrice } from '../../util/format';
 
-function Home({ addToCartRequest, amount }) {
+function Home({ addToCartRequest, amount, modal }) {
   const [products, setProducts] = useState([]);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalProduct, setModalProduct] = useState({});
 
   useEffect(() => {
     async function loadProducts() {
@@ -31,10 +29,6 @@ function Home({ addToCartRequest, amount }) {
 
   function handleAddToCart(product) {
     addToCartRequest(product.id);
-  }
-
-  function closeModal() {
-    setModalOpen(false);
   }
 
   return (
@@ -56,7 +50,7 @@ function Home({ addToCartRequest, amount }) {
           </li>
         ))}
       </ProductList>
-      {modalOpen && <Modal closeModal={closeModal} product={modalProduct} />}
+      {modal.open && <Modal product={modal.product} />}
     </>
   );
 }
@@ -67,6 +61,7 @@ const mapStateToProps = state => ({
 
     return amount;
   }, {}),
+  modal: state.modal,
 });
 const mapDispatchToProps = dispatch =>
   bindActionCreators(CartActions, dispatch);

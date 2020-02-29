@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as ModalActions from '../../store/modules/modal/actions';
 import { Container, ProductModal } from './styles';
 
-export default function Modal({ product, closeModal }) {
+function Modal({ product, closeModal }) {
   return (
     <Container>
       <ProductModal open>
@@ -11,7 +13,9 @@ export default function Modal({ product, closeModal }) {
         <img src={product.image} alt="Tenis" />
         <strong>{product.title}</strong>
         <span>{product.priceFormatted}</span>
-        <Link to="/cart">Finalizar Pedido</Link>
+        <Link onClick={closeModal} to="/cart">
+          Finalizar Pedido
+        </Link>
         <button onClick={closeModal} type="button">
           Continuar comprando
         </button>
@@ -19,3 +23,8 @@ export default function Modal({ product, closeModal }) {
     </Container>
   );
 }
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(ModalActions, dispatch);
+
+export default connect(null, mapDispatchToProps)(Modal);
