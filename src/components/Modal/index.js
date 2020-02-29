@@ -6,6 +6,7 @@ import * as ModalActions from '../../store/modules/modal/actions';
 import { Container, ProductModal } from './styles';
 
 function Modal({ product, closeModal }) {
+  console.tron.log(product);
   return (
     <Container>
       <ProductModal open>

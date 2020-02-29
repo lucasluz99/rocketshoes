@@ -34,9 +34,8 @@ function* addToCart({ id }) {
       amount: 1,
       priceFormatted: formatPrice(product.price),
     };
-
     yield put(addToCartSuccess(data));
-    yield put(openModal(product));
+    yield put(openModal(data));
   }
 }
 
