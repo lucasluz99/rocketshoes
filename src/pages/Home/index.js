@@ -10,7 +10,7 @@ import { ProductList } from './styles';
 import api from '../../services/api';
 import { formatPrice } from '../../util/format';
 
-function Home({ addToCart, amount }) {
+function Home({ addToCartRequest, amount }) {
   const [products, setProducts] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalProduct, setModalProduct] = useState({});
@@ -30,9 +30,7 @@ function Home({ addToCart, amount }) {
   }, []);
 
   function handleAddToCart(product) {
-    addToCart(product);
-    setModalOpen(true);
-    setModalProduct(product);
+    addToCartRequest(product.id);
   }
 
   function closeModal() {
