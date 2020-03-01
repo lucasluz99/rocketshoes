@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
+export const Wrapper = styled.div``;
 export const Container = styled.div`
   background: #fff;
   padding: 30px;
   border-radius: 4px;
 
   footer {
+    display: flex;
+    flex-direction: column;
     margin-top: 10px;
     text-align: right;
 

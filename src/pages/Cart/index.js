@@ -10,7 +10,8 @@ import * as CartActions from '../../store/modules/cart/actions';
 
 import { formatPrice } from '../../util/format';
 import EmptyCart from '../../components/EmptyCart';
-import { Container, ProductTable, Total } from './styles';
+import Shipping from '../../components/Shipping';
+import { Container, ProductTable, Total, Wrapper } from './styles';
 
 function Cart({ cart, removeFromCart, updateAmountRequest, total }) {
   function increment(product) {
@@ -73,11 +74,14 @@ function Cart({ cart, removeFromCart, updateAmountRequest, total }) {
           </ProductTable>
 
           <footer>
+            <Shipping />
             <Total>
-              <span>Total:</span>
-              <strong>{total}</strong>
+              <div>
+                <span>Total:</span>
+                <strong>{total}</strong>
+              </div>
+              <button type="button">Finalizar pedido</button>
             </Total>
-            <button type="button">Finalizar pedido</button>
           </footer>
         </>
       ) : (
