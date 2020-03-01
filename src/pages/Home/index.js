@@ -6,16 +6,21 @@ import * as CartActions from '../../store/modules/cart/actions';
 
 import Modal from '../../components/Modal';
 
-import { ProductList } from './styles';
+import { ProductList, Pagination } from './styles';
 import api from '../../services/api';
 import { formatPrice } from '../../util/format';
 
 function Home({ addToCartRequest, amount, modal }) {
   const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageExists, setPageExists] = useState(true);
+  const pageLimit = 6;
 
   useEffect(() => {
     async function loadProducts() {
-      const response = await api.get('products');
+      const response = await api.get(
+        `products?_page=${currentPage}&_limit=${pageLimit}`
+      );
       const data = response.data.map(product => ({
         ...product,
         priceFormatted: formatPrice(product.price),
@@ -25,14 +30,50 @@ function Home({ addToCartRequest, amount, modal }) {
     }
 
     loadProducts();
-  }, []);
+  }, [currentPage, pageLimit]);
 
   function handleAddToCart(product) {
     addToCartRequest(product.id);
   }
 
+  async function nextPage() {
+    const response = await api.get(
+      `products?_page=${currentPage + 1}&_limit=${pageLimit}`
+    );
+
+    if (response.data.length === 0) {
+      setPageExists(false);
+      return;
+    }
+    setCurrentPage(currentPage + 1);
+  }
+
+  function prevPage() {
+    setPageExists(true);
+    setCurrentPage(currentPage - 1);
+  }
+
   return (
     <>
+      <Pagination>
+        {currentPage !== 1 && (
+          <li>
+            <button onClick={prevPage} type="button">
+              Anterior
+            </button>
+          </li>
+        )}
+        <li>
+          <span>{currentPage}</span>
+        </li>
+        <li>
+          {pageExists && (
+            <button onClick={nextPage} type="button">
+              Próximo
+            </button>
+          )}
+        </li>
+      </Pagination>
       <ProductList>
         {products.map(product => (
           <li key={product.id}>

@@ -68,3 +68,24 @@ export const ProductList = styled.ul`
     }
   }
 `;
+
+export const Pagination = styled.ul`
+  list-style: none;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  span {
+    color: #fff;
+    margin: 0 20px;
+    font-size: 16px;
+  }
+
+  button {
+    background: #7159c1;
+    border: 0;
+    border-radius: 4px;
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+  }
+`;
