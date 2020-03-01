@@ -26,7 +26,7 @@ function Header({ cartSize }) {
 }
 
 const mapStateToProps = state => ({
-  cartSize: state.cart.length,
+  cartSize: state.cart.products.length,
 });
 
 export default connect(mapStateToProps)(Header);

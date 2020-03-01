@@ -1,15 +1,20 @@
 import { call, all, takeLatest, select, put } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
-import { updateAmountSuccess, addToCartSuccess } from './actions';
+import {
+  updateAmountSuccess,
+  addToCartSuccess,
+  calcShippingSuccess,
+} from './actions';
 import { openModal } from '../modal/actions';
 
 import { formatPrice } from '../../../util/format';
 
 import api from '../../../services/api';
+import apiback from '../../../services/apiback';
 
 function* addToCart({ id }) {
   const productExists = yield select(state =>
-    state.cart.find(p => p.id === id)
+    state.cart.products.find(p => p.id === id)
   );
 
   const { data: stock } = yield call(api.get, `stock/${id}`);
@@ -54,7 +59,26 @@ function* updateAmount({ id, amount }) {
   yield put(updateAmountSuccess(id, amount));
 }
 
+function* calcShipping({ zip }) {
+  const { data: shipping } = yield call(apiback.post, '/shipping', { zip });
+
+  const {
+    Valor: price,
+    PrazoEntrega: days,
+  } = shipping.CalcPrecoPrazoResult.Servicos.cServico[0];
+
+  const data = {
+    zip,
+    price,
+    days,
+  };
+
+  console.log(data);
+
+  yield put(calcShippingSuccess(data));
+}
 export default all([
   takeLatest('@cart/ADD_REQUEST', addToCart),
   takeLatest('@cart/UPDATE_AMOUNT_REQUEST', updateAmount),
+  takeLatest('@cart/CALC_SHIPPING_REQUEST', calcShipping),
 ]);

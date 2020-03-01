@@ -25,3 +25,17 @@ export function updateAmountRequest(id, amount) {
     amount,
   };
 }
+
+export function calcShippingRequest(zip) {
+  return {
+    type: '@cart/CALC_SHIPPING_REQUEST',
+    zip,
+  };
+}
+
+export function calcShippingSuccess(infos) {
+  return {
+    type: '@cart/CALC_SHIPPING_SUCCESS',
+    infos,
+  };
+}
