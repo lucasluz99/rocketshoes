@@ -21,6 +21,7 @@ function Home({ addToCartRequest, amount, modal }) {
       const response = await api.get(
         `products?_page=${currentPage}&_limit=${pageLimit}`
       );
+      console.tron.log(response.data);
       const data = response.data.map(product => ({
         ...product,
         priceFormatted: formatPrice(product.price),
@@ -38,10 +39,11 @@ function Home({ addToCartRequest, amount, modal }) {
 
   async function nextPage() {
     const response = await api.get(
-      `products?_page=${currentPage + 1}&_limit=${pageLimit}`
+      `products?_page=${currentPage + 2}&_limit=${pageLimit}`
     );
 
     if (response.data.length === 0) {
+      setCurrentPage(currentPage + 1);
       setPageExists(false);
       return;
     }
