@@ -24,7 +24,7 @@
 
 Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte do meu portifólio pessoal.
 
-**Para me desafiar e aprender mais resolvir criar algumas funcionalides a mais que não foram abordadas no projeto.As funcionalidades são:**
+**Para me desafiar e aprender mais resolvir criar algumas funcionalides a mais que não foram abordadas no curso.As funcionalidades são:**
 
 - Paginação de produtos
 - Calculo do valor do frete através da API dos correios
