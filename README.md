@@ -11,26 +11,25 @@
 
 ![Captura de tela de 2020-03-01 23-44-17](https://user-images.githubusercontent.com/53489804/75641319-9e1da400-5c16-11ea-94b9-3091505c784d.png)
 
-# Sobre o projeto
-
-A versão web do GoBarber é exclusiva para prestadores de serviços.Ou seja,clientes normais que desejam agendar algum atendimento não farão isto através da versão web,farão isto através da versão Mobile.
 
 # Funcionalidades
 
-- Ver a agenda de acordo com a data selecionada.
-- Atualizar dados do perfil.
-- Adicionar Avatar a conta.
-- Recuperação de senha através de token enviado ao e-mail.
-
-# O que aprendi desenvolvendo este projeto
-
-
+- Adicionar produto ao carrinho
+- Calcular frete (API dos correios)
+- Alterar quantidade de produtos no carrinho
+- Remover produto do carrinho
 
 # Por quê ?
 
 Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte do meu portifólio pessoal.
-Para explorar o que eu aprendi ao longo do curso resolvi criar algumas funcionalidades a mais que não foram abordadas no curso.Estas funcionalidades são a **Esqueci minha senha** e uma **função que lida com erros de network** caso haja algum problema com o server,retornando uma resposta visual ao cliente.
-  
+**Para me desafiar e aprender mais resolvir criar algumas funcionalides a mais que não foram abordadas no projeto.As funcionalidades são:**
+
+- Paginaçaõ de produtos
+- Calculo do valor do frete através da API dos correios
+- Modal que é aberto ao produto ser adicionado no carrinho
+- Manter os items adicionados no carrinho mesmo que o usuário atualize a página (Redux persist)
+
+
 # Inicializando
 
 - 1º clone o repositório
