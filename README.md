@@ -35,13 +35,20 @@ Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte
 # Inicializando
 
 - 1º clone o repositório
-````git clone git@github.com:lucasluz99/gobarberreactjs.git````
+````git clone git@github.com:lucasluz99/rocketshoes.git````
 - 2º entre na pasta
-`cd gobarberreactjs`
-- 3º inicie a aplicação
+`cd rocketshoes`
+ - 3º instale as dependências
+ `yarn`
+ - 4º inicie a aplicação
 `yarn start`
 
-Desta forma você terá acesso apenas ao frontend da aplicação,para ter acesso as funcionalidades acesse o repositório do nosso servidor [GoBarber Server](https://github.com/lucasluz99/gobarber).
+As informações dos produtos e estoque estão guardadas no arquivo `server.json` e são consumidas através de uma API fake criada através JsonServer.
+
+-1º inicializando o servidor fake
+
+`yarn json-server server.json -p 3333`
+
 
 
 
