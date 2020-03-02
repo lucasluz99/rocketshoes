@@ -21,7 +21,6 @@ function Cart({ cart, removeFromCart, updateAmountRequest, total }) {
   function decrement(product) {
     updateAmountRequest(product.id, product.amount - 1);
   }
-  console.tron.log(cart);
   return (
     <Container>
       {cart.length !== 0 ? (
@@ -97,9 +96,10 @@ const mapStateToProps = state => ({
     subtotal: formatPrice(product.price * product.amount),
   })),
   total: formatPrice(
-    state.cart.products.reduce((total, product) => {
-      return total + product.price * product.amount;
-    }, 0)
+    state.cart.shipping.price +
+      state.cart.products.reduce((total, product) => {
+        return total + product.price * product.amount;
+      }, 0)
   ),
 });
 

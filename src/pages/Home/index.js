@@ -21,7 +21,6 @@ function Home({ addToCartRequest, amount, modal }) {
       const response = await api.get(
         `products?_page=${currentPage}&_limit=${pageLimit}`
       );
-      console.tron.log(response.data);
       const data = response.data.map(product => ({
         ...product,
         priceFormatted: formatPrice(product.price),

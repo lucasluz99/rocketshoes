@@ -39,3 +39,15 @@ export function calcShippingSuccess(infos) {
     infos,
   };
 }
+
+export function calcShippingError() {
+  return {
+    type: '@cart/CALC_SHIPPING_ERROR',
+  };
+}
+
+export function resetShipping() {
+  return {
+    type: '@cart/RESET_SHIPPING',
+  };
+}

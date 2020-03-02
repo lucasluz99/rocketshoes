@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  div {
+  form {
     display: inline-flex;
     align-items: center;
+    margin-bottom: 10px;
     input {
       padding: 5px;
       margin-right: 5px;

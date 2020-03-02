@@ -4,6 +4,8 @@ import {
   updateAmountSuccess,
   addToCartSuccess,
   calcShippingSuccess,
+  calcShippingError,
+  resetShipping,
 } from './actions';
 import { openModal } from '../modal/actions';
 
@@ -60,25 +62,38 @@ function* updateAmount({ id, amount }) {
 }
 
 function* calcShipping({ zip }) {
-  const { data: shipping } = yield call(apiback.post, '/shipping', { zip });
+  try {
+    const { data: shipping } = yield call(apiback.post, '/shipping', { zip });
 
-  const {
-    Valor: price,
-    PrazoEntrega: days,
-  } = shipping.CalcPrecoPrazoResult.Servicos.cServico[0];
+    if (shipping.CalcPrecoPrazoResult.Servicos.cServico[0].Erro !== '0') {
+      yield put(calcShippingError());
+      return;
+    }
+    const {
+      Valor: priceString,
+      PrazoEntrega: days,
+    } = shipping.CalcPrecoPrazoResult.Servicos.cServico[0];
 
-  const data = {
-    zip,
-    price,
-    days,
-  };
+    const price = parseInt(priceString, 10);
 
-  console.log(data);
+    const data = {
+      zip,
+      price,
+      days,
+    };
 
-  yield put(calcShippingSuccess(data));
+    yield put(calcShippingSuccess(data));
+  } catch (err) {
+    yield put(calcShippingError);
+  }
+}
+
+function* handleShipping() {
+  yield put(resetShipping());
 }
 export default all([
   takeLatest('@cart/ADD_REQUEST', addToCart),
   takeLatest('@cart/UPDATE_AMOUNT_REQUEST', updateAmount),
   takeLatest('@cart/CALC_SHIPPING_REQUEST', calcShipping),
+  takeLatest('persist/REHYDRATE', handleShipping),
 ]);
