@@ -72,7 +72,10 @@ function Shipping({ shipping, calcShippingRequest, calcShippingError }) {
               <tr>
                 <td>{shipping.zip}</td>
                 <td>Sedex</td>
-                <td>{shipping.days} dias</td>
+                <td>
+                  {shipping.days}
+                  {shipping.days === '1' ? ' dia' : ' dias'}
+                </td>
                 <td>R$ {shipping.price}</td>
               </tr>
             </tbody>
