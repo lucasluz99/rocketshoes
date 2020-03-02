@@ -35,7 +35,7 @@ Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte
 # Inicializando
 
 - 1º clone o repositório
-````git clone git@github.com:lucasluz99/rocketshoes.git````
+``git clone git@github.com:lucasluz99/rocketshoes.git``
 - 2º entre na pasta
 `cd rocketshoes`
  - 3º instale as dependências
