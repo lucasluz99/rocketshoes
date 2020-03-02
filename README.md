@@ -4,7 +4,7 @@ Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte
 
 **Para me desafiar e aprender mais resolvir criar algumas funcionalides a mais que não foram abordadas no curso.As funcionalidades são:**
 
-- Calculo do valor do frete através da API [Rocketshoes Server](https://github.com/lucasluz99/rocketshoes-backend)
+- Calculo do valor e prazo de entrega do frete através da API [Rocketshoes Server](https://github.com/lucasluz99/rocketshoes-backend) que consulta a [API dos correios](https://www.correios.com.br/enviar-e-receber/precisa-de-ajuda/manual_rastreamentoobjetosws.pdf)
 - Modal que é aberto ao produto ser adicionado no carrinho
 - Manter os items adicionados no carrinho mesmo que o usuário atualize a página (Redux persist)
 - Paginação de produtos
