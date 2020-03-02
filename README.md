@@ -9,7 +9,7 @@
 
 ## Carrinho
 
-![Captura de tela de 2020-03-01 23-35-34](https://user-images.githubusercontent.com/53489804/75641013-a45f5080-5c15-11ea-93ad-b9b0eea57adb.png)
+![Captura de tela de 2020-03-01 23-44-17](https://user-images.githubusercontent.com/53489804/75641319-9e1da400-5c16-11ea-94b9-3091505c784d.png)
 
 # Sobre o projeto
 
