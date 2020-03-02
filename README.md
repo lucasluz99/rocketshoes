@@ -34,18 +34,25 @@ Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte
 
 # Inicializando
 
- clone o repositório
+ Clone o repositório
+ 
 `git clone git@github.com:lucasluz99/rocketshoes.git`
- entre na pasta
+
+ Entre na pasta
+ 
 `cd rocketshoes`
- instale as dependências
+
+ Instale as dependências
+ 
  `yarn`
- inicie a aplicação
+ 
+ Inicie a aplicação
+ 
 `yarn start`
 
 As informações dos produtos e estoque estão guardadas no arquivo `server.json` e são consumidas através de uma API fake criada através [JsonServer](https://github.com/typicode/json-server) .
 
-inicializando o servidor fake
+Inicializando o servidor fake
 
 `yarn json-server server.json -p 3333`
 
