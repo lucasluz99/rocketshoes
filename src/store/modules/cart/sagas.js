@@ -65,14 +65,12 @@ function* calcShipping({ zip }) {
   try {
     const { data: shipping } = yield call(apiback.post, '/shipping', { zip });
 
-    if (shipping.CalcPrecoPrazoResult.Servicos.cServico[0].Erro !== '0') {
+    const { erro, price: priceString, days } = shipping;
+
+    if (erro !== '0') {
       yield put(calcShippingError());
       return;
     }
-    const {
-      Valor: priceString,
-      PrazoEntrega: days,
-    } = shipping.CalcPrecoPrazoResult.Servicos.cServico[0];
 
     const price = parseInt(priceString, 10);
 
