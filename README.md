@@ -1,68 +1,94 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Screenshots
 
-## Available Scripts
+## Home
+![Captura de tela de 2020-03-01 23-32-24](https://user-images.githubusercontent.com/53489804/75640960-7bd75680-5c15-11ea-92f3-1a4874b4370c.png)
 
-In the project directory, you can run:
+## Modal
 
-### `yarn start`
+![Captura de tela de 2020-03-01 23-34-41](https://user-images.githubusercontent.com/53489804/75640989-93164400-5c15-11ea-96c3-99eff8a7bba5.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Carrinho
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![Captura de tela de 2020-03-01 23-44-17](https://user-images.githubusercontent.com/53489804/75641319-9e1da400-5c16-11ea-94b9-3091505c784d.png)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Funcionalidades
 
-### `yarn build`
+- Adicionar produto ao carrinho
+- Calcular frete (API dos correios)
+- Alterar quantidade de produtos no carrinho
+- Remover produto do carrinho
+- Verificação de estoque ao produto ser adicionado no carrinho ou ter a quantidade alterada
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Por quê ?
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte do meu portifólio pessoal.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Para me desafiar e aprender mais resolvir criar algumas funcionalides a mais que não foram abordadas no curso.As funcionalidades são:**
 
-### `yarn eject`
+- Paginação de produtos
+- Calculo do valor do frete através da API dos correios
+- Modal que é aberto ao produto ser adicionado no carrinho
+- Manter os items adicionados no carrinho mesmo que o usuário atualize a página (Redux persist)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Inicializando
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ Clone o repositório
+ 
+`git clone git@github.com:lucasluz99/rocketshoes.git`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ Entre na pasta
+ 
+`cd rocketshoes`
 
-## Learn More
+ Instale as dependências
+ 
+ `yarn`
+ 
+ Inicie a aplicação
+ 
+`yarn start`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+As informações dos produtos e estoque estão guardadas no arquivo `server.json` e são consumidas através de uma API fake criada através [JsonServer](https://github.com/typicode/json-server) .
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Inicializando o servidor fake
 
-### Code Splitting
+`yarn json-server server.json -p 3333`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+# Contruído com
 
-### Analyzing the Bundle Size
+[React](https://pt-br.reactjs.org/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+[React Router Dom](https://reacttraining.com/react-router/web/guides/quick-start)
 
-### Making a Progressive Web App
+[Redux](https://redux.js.org/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+[Redux Saga](https://redux-saga.js.org/)
 
-### Advanced Configuration
+[axios](https://github.com/axios/axios)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+[immer](https://github.com/immerjs/immer)
 
-### Deployment
+[polished](https://polished.js.org/docs/#hidevisually)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+[react-icons](https://react-icons.netlify.com/#/)
 
-### `yarn build` fails to minify
+[react-toastify](https://github.com/fkhadra/react-toastify)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[reactotron](https://github.com/infinitered/reactotron)
+
+[redux-persist](https://github.com/rt2zz/redux-persist)
+
+[styled-components](https://styled-components.com/)
+
+[yup](https://github.com/jquense/yup)
+
+[json-server](https://www.npmjs.com/package/json-server)
+
+[eslint](https://eslint.org/)
+
+[prettier](https://prettier.io/)
+
+
+
