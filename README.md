@@ -5,7 +5,7 @@ Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte
 **Para me desafiar e aprender mais resolvir criar algumas funcionalides a mais que não foram abordadas no curso.As funcionalidades são:**
 
 - Paginação de produtos
-- Calculo do valor do frete através da API dos correios
+- Calculo do valor do frete através da API [Rocketshoes Server](git@github.com:lucasluz99/rocketshoes-backend.git).
 - Modal que é aberto ao produto ser adicionado no carrinho
 - Manter os items adicionados no carrinho mesmo que o usuário atualize a página (Redux persist)
 
@@ -56,6 +56,26 @@ As informações dos produtos e estoque estão guardadas no arquivo `server.json
 Inicializando o servidor fake
 
 `yarn json-server server.json -p 3333`
+
+Para ter acesso a funcionalidade de calcular o frete você terá que rodar este servidor [Rocketshoes Server](git@github.com:lucasluz99/rocketshoes-backend.git).
+
+Clonando repositório
+
+`git clone git@github.com:lucasluz99/rocketshoes-backend.git`
+
+Entrando na pasta
+
+`cd rocketshoes-backend`
+
+Instalar as dependências
+
+`yarn`
+
+Iniciar o servidor
+
+`yarn dev`
+
+
 
 # Contruído com
 
