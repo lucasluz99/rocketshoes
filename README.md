@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Screenshots
 
-## Available Scripts
+## Home
+![home](https://user-images.githubusercontent.com/53489804/73971337-75e3a380-48fd-11ea-8f19-48cc39d65ee3.png)
 
-In the project directory, you can run:
+## Cadastro
 
-### `yarn start`
+![register](https://user-images.githubusercontent.com/53489804/73971326-70865900-48fd-11ea-9c81-c99832d3c2ed.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Esqueci minha senha
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![forgotpassword](https://user-images.githubusercontent.com/53489804/73971308-682e1e00-48fd-11ea-80f1-e84f2969540f.png)
 
-### `yarn test`
+## Trocar senha
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![resetpassoword](https://user-images.githubusercontent.com/53489804/73971266-58aed500-48fd-11ea-8724-46fefa489609.png)
 
-### `yarn build`
+## Lidando com erros de network
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![handleNetworkError](https://user-images.githubusercontent.com/53489804/73971289-606e7980-48fd-11ea-968a-151470a9e40c.png)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Dashboard
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![dashboard](https://user-images.githubusercontent.com/53489804/73971252-50569a00-48fd-11ea-9ab2-7cb7d21f662e.png)
 
-### `yarn eject`
+## Atualizar perfil
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![updateProfile](https://user-images.githubusercontent.com/53489804/73971212-3c129d00-48fd-11ea-9020-2672225dd5ad.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Sobre o projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+A versão web do GoBarber é exclusiva para prestadores de serviços.Ou seja,clientes normais que desejam agendar algum atendimento não farão isto através da versão web,farão isto através da versão Mobile.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Funcionalidades
 
-## Learn More
+- Ver a agenda de acordo com a data selecionada.
+- Atualizar dados do perfil.
+- Adicionar Avatar a conta.
+- Recuperação de senha através de token enviado ao e-mail.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# O que aprendi desenvolvendo este projeto
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+# Por quê ?
 
-### Analyzing the Bundle Size
+Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte do meu portifólio pessoal.
+Para explorar o que eu aprendi ao longo do curso resolvi criar algumas funcionalidades a mais que não foram abordadas no curso.Estas funcionalidades são a **Esqueci minha senha** e uma **função que lida com erros de network** caso haja algum problema com o server,retornando uma resposta visual ao cliente.
+  
+# Inicializando
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- 1º clone o repositório
+````git clone git@github.com:lucasluz99/gobarberreactjs.git````
+- 2º entre na pasta
+`cd gobarberreactjs`
+- 3º inicie a aplicação
+`yarn start`
 
-### Making a Progressive Web App
+Desta forma você terá acesso apenas ao frontend da aplicação,para ter acesso as funcionalidades acesse o repositório do nosso servidor [GoBarber Server](https://github.com/lucasluz99/gobarber).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
