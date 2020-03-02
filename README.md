@@ -110,6 +110,3 @@ Inicie o servidor
 [eslint](https://eslint.org/)
 
 [prettier](https://prettier.io/)
-
-
-
