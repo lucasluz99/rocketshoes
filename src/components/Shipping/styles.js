@@ -19,7 +19,7 @@ export const Container = styled.div`
 
 export const Infos = styled.table`
   margin-left: auto;
-  width: 200px;
+  width: 250px;
 
   th {
     text-align: left;

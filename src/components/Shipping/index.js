@@ -62,6 +62,7 @@ function Shipping({ shipping, calcShippingRequest, calcShippingError }) {
           <Infos>
             <thead>
               <tr>
+                <th>CEP</th>
                 <th>Método</th>
                 <th>Prazo</th>
                 <th>Preço</th>
@@ -69,6 +70,7 @@ function Shipping({ shipping, calcShippingRequest, calcShippingError }) {
             </thead>
             <tbody>
               <tr>
+                <td>{shipping.zip}</td>
                 <td>Sedex</td>
                 <td>{shipping.days} dias</td>
                 <td>R$ {shipping.price}</td>
