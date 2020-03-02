@@ -41,6 +41,9 @@ export default function cart(state = INITIAL_STATE, action) {
     case '@cart/CALC_SHIPPING_ERROR':
       return produce(state, draft => {
         draft.shipping.loading = false;
+        draft.shipping.price = 0;
+        draft.shipping.days = 0;
+        draft.shipping.zip = '';
         draft.shipping.error = true;
       });
     case '@cart/RESET_SHIPPING':
