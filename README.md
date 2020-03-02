@@ -1,31 +1,15 @@
 # Screenshots
 
 ## Home
-![home](https://user-images.githubusercontent.com/53489804/73971337-75e3a380-48fd-11ea-8f19-48cc39d65ee3.png)
+![Captura de tela de 2020-03-01 23-32-24](https://user-images.githubusercontent.com/53489804/75640960-7bd75680-5c15-11ea-92f3-1a4874b4370c.png)
 
-## Cadastro
+## Modal
 
-![register](https://user-images.githubusercontent.com/53489804/73971326-70865900-48fd-11ea-9c81-c99832d3c2ed.png)
+![Captura de tela de 2020-03-01 23-34-41](https://user-images.githubusercontent.com/53489804/75640989-93164400-5c15-11ea-96c3-99eff8a7bba5.png)
 
-## Esqueci minha senha
+## Carrinho
 
-![forgotpassword](https://user-images.githubusercontent.com/53489804/73971308-682e1e00-48fd-11ea-80f1-e84f2969540f.png)
-
-## Trocar senha
-
-![resetpassoword](https://user-images.githubusercontent.com/53489804/73971266-58aed500-48fd-11ea-8724-46fefa489609.png)
-
-## Lidando com erros de network
-
-![handleNetworkError](https://user-images.githubusercontent.com/53489804/73971289-606e7980-48fd-11ea-968a-151470a9e40c.png)
-
-## Dashboard
-
-![dashboard](https://user-images.githubusercontent.com/53489804/73971252-50569a00-48fd-11ea-9ab2-7cb7d21f662e.png)
-
-## Atualizar perfil
-
-![updateProfile](https://user-images.githubusercontent.com/53489804/73971212-3c129d00-48fd-11ea-9020-2672225dd5ad.png)
+![Captura de tela de 2020-03-01 23-35-34](https://user-images.githubusercontent.com/53489804/75641013-a45f5080-5c15-11ea-93ad-b9b0eea57adb.png)
 
 # Sobre o projeto
 
