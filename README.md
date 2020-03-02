@@ -23,9 +23,10 @@
 # Por quê ?
 
 Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte do meu portifólio pessoal.
+
 **Para me desafiar e aprender mais resolvir criar algumas funcionalides a mais que não foram abordadas no projeto.As funcionalidades são:**
 
-- Paginaçaõ de produtos
+- Paginação de produtos
 - Calculo do valor do frete através da API dos correios
 - Modal que é aberto ao produto ser adicionado no carrinho
 - Manter os items adicionados no carrinho mesmo que o usuário atualize a página (Redux persist)
