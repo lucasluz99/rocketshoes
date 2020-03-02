@@ -31,7 +31,7 @@ Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte
 - Alterar quantidade de produtos no carrinho
 - Remover produto do carrinho
 - Verificação de estoque ao produto ser adicionado no carrinho ou ter a quantidade alterada
-
+- Obs: O butão de finalizar compra não possui funcionaliade
 
 # Inicializando
 
