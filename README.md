@@ -1,3 +1,15 @@
+# Por quê ?
+
+Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte do meu portifólio pessoal.
+
+**Para me desafiar e aprender mais resolvir criar algumas funcionalides a mais que não foram abordadas no curso.As funcionalidades são:**
+
+- Paginação de produtos
+- Calculo do valor do frete através da API dos correios
+- Modal que é aberto ao produto ser adicionado no carrinho
+- Manter os items adicionados no carrinho mesmo que o usuário atualize a página (Redux persist)
+
+
 # Screenshots
 
 ## Home
@@ -19,17 +31,6 @@
 - Alterar quantidade de produtos no carrinho
 - Remover produto do carrinho
 - Verificação de estoque ao produto ser adicionado no carrinho ou ter a quantidade alterada
-
-# Por quê ?
-
-Construi este projeto em um curso (bootcamp Rocketseat) e este projeto faz parte do meu portifólio pessoal.
-
-**Para me desafiar e aprender mais resolvir criar algumas funcionalides a mais que não foram abordadas no curso.As funcionalidades são:**
-
-- Paginação de produtos
-- Calculo do valor do frete através da API dos correios
-- Modal que é aberto ao produto ser adicionado no carrinho
-- Manter os items adicionados no carrinho mesmo que o usuário atualize a página (Redux persist)
 
 
 # Inicializando
