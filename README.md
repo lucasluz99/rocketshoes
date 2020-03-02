@@ -18,6 +18,7 @@
 - Calcular frete (API dos correios)
 - Alterar quantidade de produtos no carrinho
 - Remover produto do carrinho
+- Verificação de estoque ao produto ser adicionado no carrinho ou ter a quantidade alterada
 
 # Por quê ?
 
