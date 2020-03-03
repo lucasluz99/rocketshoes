@@ -67,34 +67,19 @@ Inicie o servidor
 
 # Contruído com
 
-[React](https://pt-br.reactjs.org/)
-
-[React Router Dom](https://reacttraining.com/react-router/web/guides/quick-start)
-
-[Redux](https://redux.js.org/)
-
-[Redux Saga](https://redux-saga.js.org/)
-
-[axios](https://github.com/axios/axios)
-
-[immer](https://github.com/immerjs/immer)
-
-[polished](https://polished.js.org/docs/#hidevisually)
-
-[react-icons](https://react-icons.netlify.com/#/)
-
-[react-toastify](https://github.com/fkhadra/react-toastify)
-
-[reactotron](https://github.com/infinitered/reactotron)
-
-[redux-persist](https://github.com/rt2zz/redux-persist)
-
-[styled-components](https://styled-components.com/)
-
-[yup](https://github.com/jquense/yup)
-
-[json-server](https://www.npmjs.com/package/json-server)
-
-[eslint](https://eslint.org/)
-
-[prettier](https://prettier.io/)
+- [React](https://pt-br.reactjs.org/)
+- [React Router Dom](https://reacttraining.com/react-router/web/guides/quick-start)
+- [Redux](https://redux.js.org/)
+- [Redux Saga](https://redux-saga.js.org/)
+- [axios](https://github.com/axios/axios)
+- [immer](https://github.com/immerjs/immer)
+- [polished](https://polished.js.org/docs/#hidevisually)
+- [react-icons](https://react-icons.netlify.com/#/)
+- [react-toastify](https://github.com/fkhadra/react-toastify)
+- [reactotron](https://github.com/infinitered/reactotron)
+- [redux-persist](https://github.com/rt2zz/redux-persist)
+- [styled-components](https://styled-components.com/)
+- [yup](https://github.com/jquense/yup)
+- [json-server](https://www.npmjs.com/package/json-server)
+- [eslint](https://eslint.org/)
+- [prettier](https://prettier.io/)
