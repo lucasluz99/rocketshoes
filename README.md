@@ -39,13 +39,13 @@
 
 `yarn start`
 
-As informações dos produtos e estoque estão guardadas no arquivo `server.json` e são consumidas através de uma API fake criada através [JsonServer](https://github.com/typicode/json-server) .
+### As informações dos produtos e estoque estão guardadas no arquivo `server.json` e são consumidas através de uma API fake criada através [JsonServer](https://github.com/typicode/json-server) .
 
 Inicialize o servidor fake
 
 `yarn json-server server.json -p 3333`
 
-Para ter acesso a funcionalidade de calcular o frete você terá que rodar este servidor [Rocketshoes Server](https://github.com/lucasluz99/rocketshoes-backend).
+### Para ter acesso a funcionalidade de calcular o frete você terá que rodar este servidor [Rocketshoes Server](https://github.com/lucasluz99/rocketshoes-backend).
 
 Clone o repositório
 
