@@ -49,7 +49,7 @@ Inicialize o servidor fake
 
 Clone o repositório
 
-`git clone git@github.com:lucasluz99/rocketshoes-backend.git`
+`git clone https://github.com/lucasluz99/rocketshoes.git`
 
 Entre na pasta
 
